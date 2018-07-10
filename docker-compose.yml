@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+
+  rest-api:
+    build: 
+      context: ./rest-api
+      dockerfile: debug.Dockerfile
+    ports: 
+      - 80:80
+    volumes:
+      - ./rest-api/src:/app

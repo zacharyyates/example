@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to find out which attributes exist for C# debugging
+    // Use hover for the description of the existing attributes
+    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+    "version": "0.2.0",
+    "configurations": [
+         {
+            "type": "coreclr",
+            "request": "attach",
+              
+            "name": "Backface",
+             //"processName": "dotnet",
+             "processId":"${command:pickRemoteProcess}",
+             "sourceFileMap": {
+                 "/": "${workspaceRoot}/rest-api/"
+             },
+             "pipeTransport": {
+                 "debuggerPath": "/vsdbg/vsdbg",
+                 "pipeProgram": "docker",
+                 "pipeCwd": "${workspaceRoot}",
+                 "pipeArgs": [ "exec", "-i", "example_rest-api_1" ],
+                 "quoteArgs": false
+             },
+             "justMyCode": true,
+             "requireExactSource": false,
+         }
+     ,]
+ }
