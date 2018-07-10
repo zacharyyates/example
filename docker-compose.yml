@@ -9,4 +9,4 @@ services:
     ports: 
       - 80:80
     volumes:
-      - ./rest-api/src:/app
+      - ./rest-api/src:/src

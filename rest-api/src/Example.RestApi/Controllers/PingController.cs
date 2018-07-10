@@ -10,5 +10,9 @@ namespace Example.RestApi.Controllers
                 Message = "pong"
             });
         }
+
+        public void Junk() {
+            
+        }
     }
 }

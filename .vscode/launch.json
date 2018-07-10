@@ -8,21 +8,20 @@
             "type": "coreclr",
             "request": "attach",
               
-            "name": "Backface",
-             //"processName": "dotnet",
-             "processId":"${command:pickRemoteProcess}",
-             "sourceFileMap": {
-                 "/": "${workspaceRoot}/rest-api/"
-             },
-             "pipeTransport": {
-                 "debuggerPath": "/vsdbg/vsdbg",
-                 "pipeProgram": "docker",
-                 "pipeCwd": "${workspaceRoot}",
-                 "pipeArgs": [ "exec", "-i", "example_rest-api_1" ],
-                 "quoteArgs": false
-             },
-             "justMyCode": true,
-             "requireExactSource": false,
+            "name": "Rest Api",
+            "processId":"${command:pickRemoteProcess}",
+            "sourceFileMap": {
+                "/": "${workspaceRoot}/rest-api/"
+            },
+            "pipeTransport": {
+                "debuggerPath": "/vsdbg/vsdbg",
+                "pipeProgram": "docker",
+                "pipeCwd": "${workspaceRoot}",
+                "pipeArgs": [ "exec", "-i", "example_rest-api_1" ],
+                "quoteArgs": false
+            },
+            "justMyCode": true,
+            "requireExactSource": false,
          }
      ,]
  }

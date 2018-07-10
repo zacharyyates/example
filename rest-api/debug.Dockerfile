@@ -11,7 +11,7 @@ RUN apt-get update && \
 RUN curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l /vsdbg
 
 EXPOSE 80
-VOLUME /app
-WORKDIR /app/Example.RestApi
+VOLUME /src
+WORKDIR /src/Example.RestApi
 
 ENTRYPOINT dotnet watch run --urls 'http://0.0.0.0:80'
